@@ -14,7 +14,7 @@ public class Pessoa {
         this.sexo = sexo;
     }
 
-    public void setImc(int imc) {
+    public void setImc(double imc) {
         this.imc = imc;
     }
 
