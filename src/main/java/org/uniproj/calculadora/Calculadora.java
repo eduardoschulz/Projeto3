@@ -3,7 +3,8 @@ import org.uniproj.pessoa.*;
 public class Calculadora {
 
     public static void calcularImc(Pessoa pessoa){
-       pessoa.setImc(pessoa.getPeso()/Math.pow(pessoa.getAltura(),2));
+        double alturaSqr = Math.pow((double) pessoa.getAltura()/100, 2.0);
+       pessoa.setImc(pessoa.getPeso()/alturaSqr);
     }
 
     public static String statusImc(Pessoa pessoa){

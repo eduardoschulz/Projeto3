@@ -11,7 +11,7 @@ public class Main {
         Pessoa p1 = new Pessoa(19, 61, 165, "Moxé", "manleto", "masculino");
         calcularImc(p1);
         String stats = statusImc(p1);
-        System.out.printf("%s\n", stats);
+        System.out.printf("%s\n%s", stats, p1.getImc());
 
 
     }
