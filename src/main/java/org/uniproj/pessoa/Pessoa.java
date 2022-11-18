@@ -1,15 +1,17 @@
 package org.uniproj.pessoa;
 
 public class Pessoa {
-    private int idade, peso, altura, imc;
+    private int idade, peso, altura ; 
+    private double imc;
     private String nome, codigo, sexo;
 
-    public Pessoa(int idade, int peso, int altura, String nome, String codigo) {
+    public Pessoa(int idade, int peso, int altura, String nome, String codigo, String sexo) {
         this.idade = idade;
         this.peso = peso;
         this.altura = altura;
         this.nome = nome;
         this.codigo = codigo;
+        this.sexo = sexo;
     }
 
     public void setImc(int imc) {
@@ -64,11 +66,8 @@ public class Pessoa {
         this.codigo = codigo;
     }
 
-    public int getImc(){
+    public double getImc(){
         return imc;
     }
 
-    public void setImc(double v){
-        this.imc = imc;
-    }
 }
