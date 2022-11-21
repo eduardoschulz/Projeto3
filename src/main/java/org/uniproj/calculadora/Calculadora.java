@@ -2,9 +2,11 @@ package org.uniproj.calculadora;
 import org.uniproj.pessoa.*;
 public class Calculadora {
 
-    public static void calcularImc(Pessoa pessoa){
+    public static double calcularImc(Pessoa pessoa){
         double alturaSqr = Math.pow((double) pessoa.getAltura()/100, 2.0);
-       pessoa.setImc(pessoa.getPeso()/alturaSqr);
+        double imc = pessoa.getPeso()/alturaSqr;
+        pessoa.setImc(imc);
+        return imc;
     }
 
     public static String statusImc(Pessoa pessoa){
