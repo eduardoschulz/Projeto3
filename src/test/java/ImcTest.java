@@ -1,4 +1,9 @@
-package org.uniproj;
+import org.junit.Test;
+import org.uniproj.pessoa.*;
+
+import static org.uniproj.calculadora.Calculadora.calcularImc;
+import static org.uniproj.calculadora.Calculadora.statusImc;
+import static org.uniproj.calculadora.Calculadora.txGorduraCorporal;
 
 public class ImcTest {
 	
@@ -6,12 +11,10 @@ public class ImcTest {
 	public void imcTest() {
 		
 		Pessoa p1 = new Pessoa(19, 75, 175, "schula", "alemão", "masculino");
-		Calaculadora c = new Calculadora();
-		
-		c.calcularImc(p1);
-		System.out.prntlin(p1.getImc());
-		c.statusImc(p1);
-		c.txGorduraCorporal(p1);
+		calcularImc(p1);
+		System.out.println(p1.getImc());
+		statusImc(p1);
+		txGorduraCorporal(p1);
 	}
 	
 }

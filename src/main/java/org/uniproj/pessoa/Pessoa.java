@@ -5,7 +5,7 @@ public class Pessoa {
     private double imc;
     private String nome, codigo, sexo;
 
-    public Pessoa(int idade, int peso, int altura, String nome, String codigo, String sexo) {
+    public Pessoa(String nome, String codigo, int idade, int peso, int altura,  String sexo) {
         this.idade = idade;
         this.peso = peso;
         this.altura = altura;
