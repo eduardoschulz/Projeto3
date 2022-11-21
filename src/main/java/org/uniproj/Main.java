@@ -14,28 +14,33 @@ public class Main {
         Pessoa pessoa = null;
         String linha = f.leArquivo(".save.json");
         if(!(linha.equals("!"))){
-            if(Io.inputString("Save encontrado. Deseja carrega-lo? ").equalsIgnoreCase("S"))
+            if(Io.inputString("Save encontrado. Deseja carrega-lo?(S/N) ").equalsIgnoreCase("S"))
                 pessoa = Json.jsonToPessoa(linha);}
         else
             pessoa = cadastrarPessoa();
 
         System.out.printf("%s\n", opcoes());
         while(true){
-            int recv = Io.inputInt(">");
+            String recv = Io.inputString(">");
             switch (recv){
-                case 1:
+                case "1":
                     System.out.printf("%.2f\n", calcularImc(pessoa));
                     break;
-                case 2:
+                case "2":
                     System.out.printf("%s\n", statusImc(pessoa));
                     break;
-                case 3:
+                case "3":
                     System.out.printf("%s\n", txGorduraCorporal(pessoa));
                     break;
-                case 4:
+                case "4":
+                    System.out.printf("%d\n", pesoIdeal(pessoa));
                     break;
-                case 5:
-                    break;
+                case "5":
+                    sairESalvar(pessoa, f);
+                case ":wq":
+                    sairESalvar(pessoa, f);
+                case ":q":
+                    System.exit(0);
                 default:
                     System.out.println("Opção Inválida! ");
 
@@ -63,6 +68,11 @@ public class Main {
                 "[3] Fazer Tx Gordura Corporal\n" +
                 "[4] Fazer Peso Ideal\n" +
                 "[5] Sair\n";
+    }
+    public static void sairESalvar(Pessoa pessoa, FileIO f){
+        String json = Json.pessoaToJson(pessoa);
+        f.escreverEmArquivo(json, ".save.json");
+        System.exit(0);
     }
 
 }

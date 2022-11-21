@@ -34,5 +34,9 @@ public class Calculadora {
         return (1.2 * pessoa.getImc()) - (10.8 * ((pessoa.getSexo() == "feminino")? 0 : 1) + (0.23 * pessoa.getIdade()) - 5.4);
     }
 
+    public static int pesoIdeal(Pessoa pessoa){
+        return (pessoa.getAltura() - 100) - ((pessoa.getAltura() - 150)/ ((pessoa.getSexo() == "masculino")? 4 : 2));
+    }
+
 
 }
