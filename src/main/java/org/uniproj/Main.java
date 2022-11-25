@@ -3,7 +3,7 @@ package org.uniproj;
 import org.uniproj.arquivo.FileIO;
 import org.uniproj.arquivo.Json;
 import org.uniproj.pessoa.Pessoa;
-import org.uniproj.utils.Io;
+import org.uniproj.io.Io;
 
 import static org.uniproj.calculadora.Calculadora.*;
 
