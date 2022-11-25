@@ -1,6 +1,7 @@
 package org.uniproj.pessoa;
 
 public class Pessoa {
+    public boolean getImc;
     private int idade, peso, altura ; 
     private double imc;
     private String nome, codigo, sexo;

@@ -13,9 +13,12 @@ public class Main {
         FileIO f = new FileIO();
         Pessoa pessoa = null;
         String linha = f.leArquivo(".save.json");
-        if(!(linha.equals("!"))){
-            if(Io.inputString("Save encontrado. Deseja carrega-lo?(S/N) ").equalsIgnoreCase("S"))
-                pessoa = Json.jsonToPessoa(linha);}
+        if (!(linha.equals("!"))) {
+            if (Io.inputString("Save encontrado. Deseja carrega-lo?(S/N) ").equalsIgnoreCase("S"))
+                pessoa = Json.jsonToPessoa(linha);
+         else
+            pessoa = cadastrarPessoa();
+        }
         else
             pessoa = cadastrarPessoa();
 

@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.uniproj.pessoa.Pessoa;
 
 public class PessoaTest {
 	Pessoa p1 = new Pessoa( "schula", "alemão",19, 75, 175, "masculino");

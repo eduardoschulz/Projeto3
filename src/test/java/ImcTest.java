@@ -10,7 +10,7 @@ public class ImcTest {
 	@Test
 	public void imcTest() {
 		
-		Pessoa p1 = new Pessoa(19, 75, 175, "schula", "alemão", "masculino");
+		Pessoa p1 = new Pessoa("Eduardo","e", 75, 175, 75, "masculino");
 		calcularImc(p1);
 		System.out.println(p1.getImc());
 		statusImc(p1);
